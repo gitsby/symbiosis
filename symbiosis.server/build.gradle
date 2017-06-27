@@ -1,0 +1,18 @@
+dependencies {
+  //spring
+  compile ("org.springframework:spring-webmvc:${springVersion}"){
+    exclude group: 'commons-logging', module: 'commons-logging'
+  }
+
+  // Logging
+  compile "org.slf4j:slf4j-log4j12:1.7.5"
+
+  // Servlet modules
+  compile "javax.servlet:javax.servlet-api:${servletVersion}"
+  compile "javax.servlet:jstl:1.2"
+  testCompile("org.testng:testng:${testNGVersion}")
+  testCompile("org.easytesting:fest-assert-core:2.0M10")
+  testCompile("org.springframework:spring-test:${springVersion}") {
+    exclude group: 'commons-logging', module: 'commons-logging'
+  }
+}

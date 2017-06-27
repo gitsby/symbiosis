@@ -1,8 +1,14 @@
 dependencies {
-  compile project(':symbiosis.upgrade')
-  // Postgres Connector
-  complie([group: 'postgresql', name: 'postgresql', version: '9.1-901-1.jdbc4'],
+  
+  compile"postgresql:postgresql:${postgreVersion}"
+  compile"postgresql:postgresql:${postgreVersion}"
+  compile"org.apache.commons:commons-dbcp2:${dbcp2Version}"
+  compile 'org.slf4j:slf4j-log4j12:1.7.5'
+      
 
-      // Connection Pool
-      [group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'])
+  testCompile("org.testng:testng:${testNGVersion}")
+  testCompile("org.easytesting:fest-assert-core:2.0M10")
+  testCompile("org.springframework:spring-test:${springVersion}") {
+    exclude group: 'commons-logging', module: 'commons-logging'
+  }
 }
