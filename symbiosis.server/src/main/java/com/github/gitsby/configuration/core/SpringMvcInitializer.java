@@ -1,4 +1,4 @@
-package com.github.gitsby.configuration.core;
+package main.java.com.github.gitsby.configuration.core;
 
 import com.github.gitsby.configuration.ApplicationConfig;
 import org.springframework.web.filter.CharacterEncodingFilter;

@@ -1,6 +1,6 @@
-package com.github.gitsby.configuration;
+package main.java.com.github.gitsby.configuration;
 
-import com.github.gitsby.configuration.dataSource.DataSourceConfig;
+import main.java.com.github.gitsby.configuration.dataSource.DataSourceConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
