@@ -1,0 +1,8 @@
+dependencies {
+  compile project(':symbiosis.upgrade')
+  // Postgres Connector
+  complie([group: 'postgresql', name: 'postgresql', version: '9.1-901-1.jdbc4'],
+
+      // Connection Pool
+      [group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'])
+}
