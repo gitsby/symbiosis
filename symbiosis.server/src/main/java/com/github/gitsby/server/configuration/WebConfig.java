@@ -1,4 +1,4 @@
-package main.java.com.github.gitsby.configuration;
+package com.github.gitsby.server.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
  * Created by Kasyanov Maxim on 6/14/2017.
  */
 @Configuration
-@ComponentScan("com.github.gitsby.controller.*")
+@ComponentScan("com.github.gitsby.server.controller.*")
 public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
     public InternalResourceViewResolver viewResolver() {

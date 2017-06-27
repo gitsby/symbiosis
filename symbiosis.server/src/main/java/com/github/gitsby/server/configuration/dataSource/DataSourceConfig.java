@@ -1,4 +1,4 @@
-package main.java.com.github.gitsby.configuration.dataSource;
+package com.github.gitsby.server.configuration.dataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package main.java.com.github.gitsby.configuration.core;
+package com.github.gitsby.server.configuration.core;
 
-import com.github.gitsby.configuration.ApplicationConfig;
+import com.github.gitsby.server.configuration.ApplicationConfig;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
