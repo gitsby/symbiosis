@@ -1,5 +1,6 @@
-package com.github.gitsby.server.configuration.dataSource;
+package com.github.gitsby.db.configuration;
 
+import javax.sql.DataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -7,8 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-
-import javax.sql.DataSource;
 
 /**
  * Created by Kasyanov Maxim on 6/14/2017.
@@ -38,7 +37,6 @@ public class DataSourceConfig {
         dataSource.setMinEvictableIdleTimeMillis(Integer.valueOf(environment.getRequiredProperty("jdbc.removeAbandonedTimeout")));
         dataSource.setTestOnBorrow(Boolean.valueOf(environment.getRequiredProperty("jdbc.testOnBorrow")));
         dataSource.setValidationQuery(environment.getRequiredProperty("jdbc.validationQuery"));
-        System.out.println(environment.getProperty("scheme.name"));
         return dataSource;
     }
 
@@ -53,9 +51,6 @@ public class DataSourceConfig {
         dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
         dataSource.setPoolPreparedStatements(Boolean.valueOf(environment.getRequiredProperty("jdbc.poolPreparedStatements")));
         dataSource.setValidationQuery(environment.getRequiredProperty("jdbc.validationQuery"));
-
-
-        System.out.println(environment.getProperty("scheme.name"));
         return dataSource;
     }
 }

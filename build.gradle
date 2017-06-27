@@ -8,7 +8,9 @@ allprojects {
   sourceCompatibility = 1.8
 
   group = "com.github.gitsby.symbiosis"
+  
 }
+
 
 subprojects {
   compileJava {
