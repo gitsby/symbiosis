@@ -1,16 +1,23 @@
 dependencies {
-  
-  compile project(":symbiosis.upgrade")
-					
-  compile"postgresql:postgresql:${postgreVersion}"
-  compile"postgresql:postgresql:${postgreVersion}"
-  compile"org.apache.commons:commons-dbcp2:${dbcp2Version}"
-  compile 'org.slf4j:slf4j-log4j12:1.7.5'
-      
 
-  testCompile("org.testng:testng:${testNGVersion}")
-  testCompile("org.easytesting:fest-assert-core:2.0M10")
-  testCompile("org.springframework:spring-test:${springVersion}") {
-    exclude group: 'commons-logging', module: 'commons-logging'
-  }
+    compile project(":symbiosis.upgrade")
+
+    compile "org.springframework:spring-context:${springVersion}"
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.9.RELEASE'
+
+    compile "postgresql:postgresql:${postgreVersion}"
+
+    /*MyBatis*/
+    compile group: 'org.mybatis', name: 'mybatis', version: '3.4.2'
+    compile group: 'org.mybatis', name: 'mybatis-spring', version: '1.3.1'
+
+    compile "org.apache.commons:commons-dbcp2:${dbcp2Version}"
+    compile 'org.slf4j:slf4j-log4j12:1.7.5'
+
+    //Test
+    testCompile("org.testng:testng:${testNGVersion}")
+    testCompile("org.easytesting:fest-assert-core:2.0M10")
+    testCompile("org.springframework:spring-test:${springVersion}") {
+        exclude group: 'commons-logging', module: 'commons-logging'
+    }
 }
